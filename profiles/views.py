@@ -32,14 +32,15 @@ class ProfileDetail(APIView):
         return Response(serializer.data)
 
     def put(self, request, pk):
-        print('put method activated')
+        print('put method activated') # pass
         profile = self.get_object(pk)
-        print('profile:', profile)
+        print('profile:', profile) # pass
         serializer = ProfileSerializer(profile, data=request.data)
-        print('serializer:', serializer)
+        print('serializer:', serializer) # pass
+        #
         if serializer.is_valid():
             serializer.save()
-            print('serializer saved')
+            print('serializer saved') # fail
             return Response(serializer.data)
-        print('serializer not valid')
+        print('serializer not valid') # fail
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
