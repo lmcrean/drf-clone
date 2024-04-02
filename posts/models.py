@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+def get_default_image_url():
+    return 'https://res.cloudinary.com/dh5lpihx1/image/upload/v1711907069/default_post_ovkj9a.jpg'
 
 class Post(models.Model):
     """
@@ -29,7 +31,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_ovkj9a.jpg', blank=True
+        upload_to='images/', default=get_default_image_url, blank=True
     )
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
