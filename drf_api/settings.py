@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-z^kk6@^b-2dd$(e#xyaf7-p79d2e^l8gkfy%fs%ypii72)me07
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost:8000',
+    'localhost',
     '8000-lmcrean-drfclone-wy5wp9evod7.ws-eu110.gitpod.io'
     ]
 
