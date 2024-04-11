@@ -40,7 +40,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '8000-lmcrean-drfclone-wy5wp9evod7.ws-eu110.gitpod.io',
-    'project5-lmcrean-1b4c7e21126b.herokuapp.com/'
+    'project5-lmcrean-1b4c7e21126b.herokuapp.com/',
+    'project5-lmcrean-1b4c7e21126b.herokuapp.com'
     ]
 
 REST_FRAMEWORK = {
