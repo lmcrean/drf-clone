@@ -111,7 +111,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True 
+# this is a temporary solution to allow all origins
+# it's a security issue in the long term
+# later we'll switch CLIENT ORIGIN to React URL 
+# and have API taking requests only form that deployed react app
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
     extracted_url = re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re. IGNORECASE).group(0)
